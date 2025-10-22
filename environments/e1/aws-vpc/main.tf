@@ -1,5 +1,7 @@
-module "vpc" {
-  source = "../modules/aws/create_vpc"
+module "create-vpc" {
+	source  = "kb7ky.scalr.io/networking/create-vpc/aws"
+	version = "0.0.1"
+
   vpc_parameters = {
     vpc1 = {
       name = var.vpc_tag
