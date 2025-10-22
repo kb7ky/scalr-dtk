@@ -31,6 +31,8 @@ module "sg_access" {
       name = "dtkv6"
       cidr_ipv6 = "2600:8800:1800:111::0/64"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
   }
 }
