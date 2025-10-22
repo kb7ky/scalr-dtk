@@ -18,7 +18,7 @@ module "sg_access" {
       from_port = -1
       to_port = -1
     }
-    r1 = {
+    r2 = {
       name = "ctk"
       cidr_ipv4 = "68.226.100.129/32"
       ip_protocol = "all"
@@ -114,7 +114,7 @@ module "sg_whitelist" {
       from_port = -1
       to_port = -1
     }
-    r1 = {
+    r2 = {
       name = "ctk"
       cidr_ipv4 = "68.226.100.129/32"
       ip_protocol = "all"
