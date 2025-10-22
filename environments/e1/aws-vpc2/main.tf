@@ -5,7 +5,7 @@ module "vpc" {
   vpc_parameters = {
     vpc1 = {
       name = var.vpc_tag
-      cidr_block = "10.0.0.0/16"
+      cidr_block = "10.1.0.0/16"
       enable_ipv6 = true
       tags = {
         Name = var.vpc_tag
@@ -16,7 +16,7 @@ module "vpc" {
   }
   subnetv4_parameters = {
     publicv4 = {
-      cidr_block = "10.0.1.0/24"
+      cidr_block = "10.1.1.0/24"
       map_public_ip_on_launch = true     
       vpc_name   = "vpc1"
       tags = {
@@ -26,7 +26,7 @@ module "vpc" {
       }
     },
     privatev4 = {
-      cidr_block = "10.0.128.0/24"
+      cidr_block = "10.1.128.0/24"
       vpc_name   = "vpc1"
       tags = {
         Name = format("%s-%s",var.vpc_tag,"privatev4")
