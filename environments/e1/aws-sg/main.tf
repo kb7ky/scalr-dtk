@@ -15,11 +15,15 @@ module "sg_access" {
       name = "dtkv4"
       cidr_ipv4 = "68.3.133.22/32"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
     r1 = {
       name = "ctk"
       cidr_ipv4 = "68.226.100.129/32"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
   }
   apprulesv6 = {
@@ -40,6 +44,7 @@ module "sg_nfssrvr" {
 
   apprulesv4 = {
     r1 = {
+      name = "nfssrvr"
       cidr_ipv4 = data.aws_vpc.selected.cidr_block
       ip_protocol = "tcp"
       to_port = 2049
@@ -104,11 +109,15 @@ module "sg_whitelist" {
       name = "dtkv4"
       cidr_ipv4 = "68.3.133.22/32"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
     r1 = {
       name = "ctk"
       cidr_ipv4 = "68.226.100.129/32"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
   }
   apprulesv6 = {
@@ -116,6 +125,8 @@ module "sg_whitelist" {
       name = "dtkv6"
       cidr_ipv6 = "2600:8800:1800:111::0/64"
       ip_protocol = "all"
+      from_port = -1
+      to_port = -1
     }
   }
 }
