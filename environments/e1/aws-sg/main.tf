@@ -83,14 +83,14 @@ module "sg_apps" {
       to_port = 3900
       from_port = 3900      
     }
-    r3 = {
+    r4 = {
       name = "logio"
       cidr_ipv4 = data.aws_vpc.selected.cidr_block
       ip_protocol = "tcp"
       to_port = 6689
       from_port = 6688      
     }
-    r4 = {
+    r5 = {
       name = "logio"
       ip_protocol = "tcp"
       to_port = 6689
