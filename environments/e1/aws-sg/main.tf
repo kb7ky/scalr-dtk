@@ -5,7 +5,7 @@ data "aws_vpc" "selected" {
 
 module "sg_access" {
 	source  = "kb7ky.scalr.io/networking/sg/aws"
-	version = "0.0.1"
+	version = "0.0.2"
   sg_name = "access"
 
   vpc_tag = var.vpc_tag
@@ -33,7 +33,7 @@ module "sg_access" {
 
 module "sg_nfssrvr" {
 	source  = "kb7ky.scalr.io/networking/sg/aws"
-	version = "0.0.1"
+	version = "0.0.2"
   sg_name = "nfssrvr"
   vpc_tag = var.vpc_tag
   tags = { tfref = format("%s-%s", var.vpc_tag,"nfssrvr") }
@@ -50,7 +50,7 @@ module "sg_nfssrvr" {
 
 module "sg_apps" {
 	source  = "kb7ky.scalr.io/networking/sg/aws"
-	version = "0.0.1"
+	version = "0.0.2"
   sg_name = "apps"
   vpc_tag = var.vpc_tag
   tags = { tfref = format("%s-%s", var.vpc_tag,"app") }
@@ -95,7 +95,7 @@ module "sg_apps" {
 
 module "sg_whitelist" {
 	source  = "kb7ky.scalr.io/networking/sg/aws"
-	version = "0.0.1"
+	version = "0.0.2"
   sg_name = "whitelist"
   vpc_tag = var.vpc_tag
   tags = { tfref = format("%s-%s", var.vpc_tag,"whitelist") }
@@ -122,7 +122,7 @@ module "sg_whitelist" {
 
 module "sg_bastion" {
 	source  = "kb7ky.scalr.io/networking/sg/aws"
-	version = "0.0.1"
+	version = "0.0.2"
 
   vpc_tag = var.vpc_tag
   sg_name = "bastion"
