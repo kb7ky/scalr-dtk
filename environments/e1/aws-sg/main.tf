@@ -4,7 +4,7 @@ data "aws_vpc" "selected" {
 }
 
 module "sg_access" {
-	source  = "kb7ky.scalr.io/networking/sg/aws"
+	source  = "kb7ky.scalr.io/security-groups/sg/aws"
 	version = "0.0.2"
   sg_name = "access"
 
@@ -32,7 +32,7 @@ module "sg_access" {
 }
 
 module "sg_nfssrvr" {
-	source  = "kb7ky.scalr.io/networking/sg/aws"
+	source  = "kb7ky.scalr.io/security-groups/sg/aws"
 	version = "0.0.2"
   sg_name = "nfssrvr"
   vpc_tag = var.vpc_tag
@@ -49,7 +49,7 @@ module "sg_nfssrvr" {
 }
 
 module "sg_apps" {
-	source  = "kb7ky.scalr.io/networking/sg/aws"
+	source  = "kb7ky.scalr.io/security-groups/sg/aws"
 	version = "0.0.2"
   sg_name = "apps"
   vpc_tag = var.vpc_tag
@@ -94,7 +94,7 @@ module "sg_apps" {
 }
 
 module "sg_whitelist" {
-	source  = "kb7ky.scalr.io/networking/sg/aws"
+	source  = "kb7ky.scalr.io/security-groups/sg/aws"
 	version = "0.0.2"
   sg_name = "whitelist"
   vpc_tag = var.vpc_tag
@@ -121,7 +121,7 @@ module "sg_whitelist" {
 }
 
 module "sg_bastion" {
-	source  = "kb7ky.scalr.io/networking/sg/aws"
+	source  = "kb7ky.scalr.io/security-groups/sg/aws"
 	version = "0.0.2"
 
   vpc_tag = var.vpc_tag
