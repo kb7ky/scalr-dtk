@@ -1,4 +1,4 @@
-module "create-vpc" {
+module "vpc" {
 	source  = "kb7ky.scalr.io/networking/create-vpc/aws"
 	version = "0.0.1"
 
